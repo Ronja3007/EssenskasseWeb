@@ -17,7 +17,7 @@ public class Historys {
 	public List<Payment> getPaymentHistoryIN() {
 		return paymentHistoryIN;
 	}
-	public List<Payment> getPaymentHistoryOUT() {
+	public List<Payment> getPaymentHistoryORDER() {
 		return paymentHistoryORDER;
 	}
 	

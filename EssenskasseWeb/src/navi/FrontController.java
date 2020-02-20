@@ -11,6 +11,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import gui.PayController;
+import gui.StartController;
+
 @WebServlet(value="*.do", loadOnStartup=1)
 public class FrontController extends HttpServlet
 {
@@ -22,7 +25,8 @@ public class FrontController extends HttpServlet
 	@Override
 	public void init() throws ServletException {
 		controller = new HashMap<String, Controller>();
-//		controller.put("/menue", new MenueController());
+		controller.put("/start", new StartController());
+		controller.put("/payIN", new PayController());
 
 
 		System.out.println("Frontcontroller initialisiert");
@@ -39,11 +43,8 @@ public class FrontController extends HttpServlet
 		
 		System.out.println("REQUESTED: " + navi + "----------------------******************------------------------");
 		
-		if(navi.equals("/service") && request.getSession().getAttribute("eingeloggt") == null) {
-			navi = "/login";
-		}
 		if(request.getMethod().toString().equals("GET")){
-			navi = "/menue";
+			navi = "/start";
 		}
 		
 		try

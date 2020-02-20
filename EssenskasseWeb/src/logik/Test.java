@@ -74,7 +74,7 @@ public class Test {
 	
 	private static void showPaymentOrder(Management manage) {
 		System.out.println("Bestellungen:");
-		for (Payment p : manage.getHistorys().getPaymentHistoryOUT()) {
+		for (Payment p : manage.getHistorys().getPaymentHistoryORDER()) {
 			System.out.println(p.getDate() + " " + p.getUserID() + " " + p.getMenueID());
 		}
 		System.out.println();

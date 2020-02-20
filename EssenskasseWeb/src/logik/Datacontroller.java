@@ -10,7 +10,7 @@ public class Datacontroller {
 		manage = new Management();
 	}
 	
-	public static Management getManage() {
+	public Management getManage() {
 		return manage;
 	}
 
