@@ -22,12 +22,19 @@
    </div>
  <footer style = "position: fixed; padding: 10px; bottom: 0; left: 0; right: 0">
    <table>
-   <tr><td><form action="/EssenskasseWeb/start.do" method="post">
-         <button style="background-color: green">Bestellungen</button> 
+   <tr><td><form action="/EssenskasseWeb/orders.do" method="post">
+         <button>Bestellungen</button> 
          </form></td>
          <td><form action="/EssenskasseWeb/payIN.do" method="post">
          <button>Einzahlungen</button>  
-         </form></td></tr>
+         </form></td>
+         <td><form action="/EssenskasseWeb/users.do" method="post">
+         <button>Liste aller User</button>  
+         </form></td>
+         <td><form action="/EssenskasseWeb/menues.do" method="post">
+         <button>Liste aller Menues</button>  
+         </form></td>
+   </tr>
    </table>   
    </footer> 
 </body>

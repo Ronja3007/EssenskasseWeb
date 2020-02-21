@@ -12,7 +12,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import gui.PayController;
-import gui.StartController;
+import gui.SaveMenueController;
+import gui.SaveUserController;
+import gui.UserController;
+import gui.MenueController;
+import gui.NewMenueController;
+import gui.NewUserController;
+import gui.OrderController;
 
 @WebServlet(value="*.do", loadOnStartup=1)
 public class FrontController extends HttpServlet
@@ -25,10 +31,15 @@ public class FrontController extends HttpServlet
 	@Override
 	public void init() throws ServletException {
 		controller = new HashMap<String, Controller>();
-		controller.put("/start", new StartController());
+		controller.put("/orders", new OrderController());
 		controller.put("/payIN", new PayController());
-
-
+		controller.put("/users", new UserController());
+		controller.put("/newUser", new NewUserController());
+		controller.put("/menues", new MenueController());
+		controller.put("/newMenue", new NewMenueController());
+		controller.put("/saveUser", new SaveUserController());
+		controller.put("/saveMenue", new SaveMenueController());
+		
 		System.out.println("Frontcontroller initialisiert");
 		System.out.println(LAYOUT_SEITE);
 	}
@@ -44,7 +55,7 @@ public class FrontController extends HttpServlet
 		System.out.println("REQUESTED: " + navi + "----------------------******************------------------------");
 		
 		if(request.getMethod().toString().equals("GET")){
-			navi = "/start";
+			navi = "/orders";
 		}
 		
 		try
