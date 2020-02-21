@@ -12,8 +12,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import gui.PayController;
-import gui.SaveMenueController;
-import gui.SaveUserController;
 import gui.UserController;
 import gui.MenueController;
 import gui.NewMenueController;
@@ -37,8 +35,6 @@ public class FrontController extends HttpServlet
 		controller.put("/newUser", new NewUserController());
 		controller.put("/menues", new MenueController());
 		controller.put("/newMenue", new NewMenueController());
-		controller.put("/saveUser", new SaveUserController());
-		controller.put("/saveMenue", new SaveMenueController());
 		
 		System.out.println("Frontcontroller initialisiert");
 		System.out.println(LAYOUT_SEITE);

@@ -3,7 +3,7 @@
 <h2>Neues Menue anlegen:</h2>
 </div>
 <div>
-<form action="/EssenskasseWeb/saveMenue.do" method ="post">
+<form action="/EssenskasseWeb/newMenue.do" method ="post">
 <table>
 	<tr><td><c:out value="Menue-Nummer eintragen:"></c:out></td>
 			<td><input type="text" name = "menueNR" placeholder="Menue-Nummer" value='<c:out value="${NRvalue}"></c:out>'></td></tr>

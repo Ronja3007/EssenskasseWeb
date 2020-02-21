@@ -3,7 +3,7 @@
 <h2>Neuen User anlegen:</h2>
 </div>
 <div>
-<form action="/EssenskasseWeb/saveUser.do" method ="post">
+<form action="/EssenskasseWeb/newUser.do" method ="post">
 <table>
 	<tr><td><c:out value="User ID eintragen:"></c:out></td>
 			<td><input type="text" name = "userID" placeholder="User ID" value="<c:out value="${IDvalue}"></c:out>"></td></tr>
